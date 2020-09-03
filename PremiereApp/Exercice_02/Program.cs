@@ -8,7 +8,9 @@ namespace Exercice_02
         {
             int number;
             Console.WriteLine("Entrez un nombre : ");
-            int.TryParse(Console.ReadLine(), out number);
+            if (!int.TryParse(Console.ReadLine(), out number)) {
+                Console.WriteLine("Mauvais format de nombre, le nombre sera mis a 0");
+            }
 
             if (number / 2 + number / 2 == number) // if (number / 2 * 2 == number)
             {
