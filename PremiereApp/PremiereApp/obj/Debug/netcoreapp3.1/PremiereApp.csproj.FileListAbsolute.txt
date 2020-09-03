@@ -1,0 +1,13 @@
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\bin\Debug\netcoreapp3.1\PremiereApp.exe
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\bin\Debug\netcoreapp3.1\PremiereApp.deps.json
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\bin\Debug\netcoreapp3.1\PremiereApp.runtimeconfig.json
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\bin\Debug\netcoreapp3.1\PremiereApp.runtimeconfig.dev.json
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\bin\Debug\netcoreapp3.1\PremiereApp.dll
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\bin\Debug\netcoreapp3.1\PremiereApp.pdb
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\obj\Debug\netcoreapp3.1\PremiereApp.AssemblyInfoInputs.cache
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\obj\Debug\netcoreapp3.1\PremiereApp.AssemblyInfo.cs
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\obj\Debug\netcoreapp3.1\PremiereApp.csproj.CoreCompileInputs.cache
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\obj\Debug\netcoreapp3.1\PremiereApp.dll
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\obj\Debug\netcoreapp3.1\PremiereApp.pdb
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\obj\Debug\netcoreapp3.1\PremiereApp.genruntimeconfig.cache
+E:\_Cursus\_Dev_Mobile_\_work\.Net\PremiereApp\PremiereApp\obj\Debug\netcoreapp3.1\PremiereApp.csprojAssemblyReference.cache
