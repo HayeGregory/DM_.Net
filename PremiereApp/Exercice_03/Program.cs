@@ -7,7 +7,7 @@ namespace Exercice_03
     {
         static void Main(string[] args)
         {
-            division();
+            // division();
             Console.WriteLine("Entrez un numero de compte ( BBAN ) : ");
             string BBAN = Console.ReadLine();
             string IBAN = makeIBAN( checkBBAN(BBAN) ? BBAN : "" ); // 377052488656 - 979797979700 - 979797979797 - 732038207644
@@ -38,7 +38,7 @@ namespace Exercice_03
          * (utilisez la méthode « Substring » de la classe « string »).
          **/
         static bool checkBBAN(string number) {
-            if (number.Length != 12) {
+            if (number.Length != 12) { // out _ ?????????????
                 Console.WriteLine("Le numero ne contient pas 12 digits");
                 return false;
             }
