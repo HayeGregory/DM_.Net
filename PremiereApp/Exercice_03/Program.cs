@@ -7,10 +7,10 @@ namespace Exercice_03
     {
         static void Main(string[] args)
         {
-            //division();
+            division();
             Console.WriteLine("Entrez un numero de compte ( BBAN ) : ");
             string BBAN = Console.ReadLine();
-            string IBAN = makeIBAN( checkBBAN(BBAN) ? BBAN : "" ); // 377052488656 - 979797979700 - 979797979797
+            string IBAN = makeIBAN( checkBBAN(BBAN) ? BBAN : "" ); // 377052488656 - 979797979700 - 979797979797 - 732038207644
             Console.WriteLine($"Numero IBAN : {IBAN}");
         }
 
@@ -26,10 +26,8 @@ namespace Exercice_03
             Console.WriteLine("Opérande B :");
             int.TryParse(Console.ReadLine(), out int B);
 
-            Console.WriteLine($"Division entière : {A / B}, Modulo : {A % B}, Division : {(double)A / B}");
+            Console.WriteLine($"Division entière : {A / B}, Modulo : {A % B}, Division : {((double)A / B).ToString(new CultureInfo("en-US"))}");
 
-            //string output = $"Division entière : {A / B}, Modulo : {A % B}, Division : {(double)A / B}".ToString(new CultureInfo("en-US"));
-            //Console.WriteLine(output);
         }
         #endregion
 
