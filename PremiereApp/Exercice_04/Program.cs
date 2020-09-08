@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Exercice_04
 {
@@ -9,9 +11,10 @@ namespace Exercice_04
             //  fibbo(25);
             //  facto();
             //  nbPremier();
+            // nbPremierOpti();
             // multi20();
             //  additionDouble();
-             racine2();
+              racine2();
         }
 
         #region ex3A
@@ -81,6 +84,43 @@ namespace Exercice_04
             }
         }
 
+        static void nbPremierOpti()
+        {
+            int n = 2;
+            bool is_np;
+            ArrayList list = new ArrayList();
+
+            Console.WriteLine(" nombre premiers ? ");
+            int.TryParse(Console.ReadLine(), out int x);
+            for (int i = 0; i < x; n++)
+            {
+                is_np = true;
+
+                foreach (int item in list)
+                {
+                    Console.WriteLine("pour " + n + " - test de diviseur : " + item);
+                    if (item > Math.Sqrt(n)) { break; }
+                    if (n % item == 0) {
+                        is_np = false;
+                        break;
+                    }
+                }
+
+                if (is_np)
+                {
+                    list.Add(n);
+                    Console.WriteLine("j'ajoute " + n + " a ma liste ");
+                    i++;
+                }
+            }
+
+            foreach (var item in list)
+            {
+                Console.WriteLine(item + " ");
+            }
+        }
+
+
         #endregion
         #region ex3D
         /**
@@ -124,12 +164,41 @@ namespace Exercice_04
          *  (Math.Sqrt (x) ne peut être utilisée que pour vérifier la reponse)
          */
         static void racine2() {
-            int n = 9;
-            Console.WriteLine("la solution : " + Math.Sqrt(n));
 
+            Console.WriteLine("entrez un nombre : ");
+            int.TryParse(Console.ReadLine(), out int nb);
 
+            decimal fa, a = 1, e = 1;
+
+            while (e > 0.00000000001M) {
+                fa = (a + nb / a) / 2;
+                if (fa > a)
+                {
+                    e = fa - a;
+                }
+                else {
+                    e = a - fa;
+                }
+                a = fa;
+            }
+
+            Console.WriteLine("racine2 carre : " + Math.Round(a,10));
+            Console.WriteLine("solution (sqrt ) : " + Math.Sqrt(nb));
 
         }
+        static void racine2correction()
+        {
+
+            Console.WriteLine("entrez un nombre : ");
+            int.TryParse(Console.ReadLine(), out int nb);
+
+
+
+            Console.WriteLine("racine2 carre : " );
+            Console.WriteLine("solution (sqrt ) : " + Math.Round(Math.Sqrt(nb),10));
+
+        }
+
         #endregion
 
 
