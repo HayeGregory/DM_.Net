@@ -44,19 +44,12 @@ namespace ExerciceSUPP
 
         }
         static string convertisseurSeconde(int secondes) {
-            const int SECONDES_JOUR = 86_400;
-            const int SECONDES_HEURE = 3_600;
-            const int SECONDES_MINUTE = 60;
-
             int jj, hh, mm, ss;
 
-
-            jj = secondes / SECONDES_JOUR;
-            secondes = secondes % SECONDES_JOUR;
-            hh = secondes / SECONDES_HEURE;
-            secondes = secondes % SECONDES_HEURE;
-            mm = secondes / SECONDES_MINUTE;
-            ss = secondes % SECONDES_MINUTE;
+            jj = (int)secondes / 86400;
+            hh = (int)secondes % 86400 / 3600;
+            mm = (int)secondes % 86400 % 3600 / 60;
+            ss = (int)secondes % 86400 % 3600 % 60;
 
             return $"{jj:D3}::{hh:D2}:{mm:D2}:{ss:D2}";
         }
