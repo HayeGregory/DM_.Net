@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Exercice_05
 {
@@ -10,10 +11,11 @@ namespace Exercice_05
          * */
         static void Main(string[] args)
         {
-            
-            PremierOptiUnder();
-            nbPremierOpti();
+
+            // PremierOptiUnder();
+            // nbPremierOpti();
             // addnombreString();
+            addNombreStringStack();
         }
         #region Exercice 05 - 1
         /**
@@ -101,6 +103,40 @@ namespace Exercice_05
         * ces deux nombres en ne convertissant que ca ractère par caractère. 
         * (Méthode « ToCharArray » de la classe « string »).
         **/
+
+        static void addNombreStringStack() {
+            string nbA = "100000000000000000000000000000";
+            string nbB = "2";
+
+            Stack<int> stackNBA = new Stack<int>();
+            foreach (char c in nbA)
+            {
+                stackNBA.Push(c - 48);
+            }
+            Stack<int> stackNBB = new Stack<int>();
+            foreach (char c in nbB)
+            {
+                stackNBB.Push(int.Parse(c.ToString()));
+            }
+
+            int report = 0;
+            string resultat = "";
+
+
+            while (stackNBA.Count > 0 || stackNBB.Count > 0) {
+                int chiffreA = (stackNBA.Count > 0 ? stackNBA.Pop() : 0);
+                int chiffreB = (stackNBB.Count > 0 ? stackNBB.Pop() : 0);
+
+                int addition = chiffreA + chiffreB + report;
+                report = addition / 10;
+                int valeur = addition % 10;
+
+                resultat = valeur + resultat;
+            }
+            if (report > 0) resultat = report + resultat;
+            Console.WriteLine(resultat);
+        }
+
         static void addnombreString()
         {
             Console.WriteLine("Nombre A : ");
