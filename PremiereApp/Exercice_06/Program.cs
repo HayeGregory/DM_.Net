@@ -2,18 +2,28 @@
 
 namespace Exercice_06
 {
+    public struct Point
+    {
+        public int x, y;
+    }
+
+    public struct Celsius {
+        public double Temperature;
+    }
+    public struct Fahrenheit {
+        public double Temperature;
+    }
     class Program
     {
         /*
          * ercercice 06 - page 172
          */
-        public struct Point {
-            int x, y;
-        }
+
 
         static void Main(string[] args)
         {
             tabPoint();
+            temperatureCelsiusFahrenheit();
         }
 
         #region Exercice 06 - 1 structure point x y
@@ -26,7 +36,39 @@ namespace Exercice_06
          *              « X : 2 Y : 2 »
          *                              « X : 3 Y : 3 »
          * */
-        public static void tabPoint() { }
+        public static void tabPoint() {
+
+            Point?[,] tab = new Point?[5,5];
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Point p;
+                    p.x = i+1;
+                    p.y = j+1;
+
+                    if (i == j ) tab[i,j] = p;
+                }
+            }
+
+            int n = 0;
+            foreach (Point ?p in tab)
+            {
+                Console.Write( p.HasValue ? $"x : {p.Value.x} - y : {p.Value.y}" : "\t\t");
+                if (++n % tab.GetLength(0) == 0) Console.WriteLine();
+            }
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    for (int j = 0; j < 5; j++)
+            //    {
+            //        Console.Write(tab[i,j].x == tab[i, j].y ? $"X : {tab[i, j].x} - Y : {tab[i, j].y}" : "\t\t");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+        }
 
         #endregion
 
@@ -35,7 +77,10 @@ namespace Exercice_06
          * Ecrire deux structures Celsius et Fahrenheit toutes deux ayant une variable 
          * de type double appelée « Temperature ».
          * */
+        public static void temperatureCelsiusFahrenheit() {
 
+            return;
+        }
 
         #endregion
 
