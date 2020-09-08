@@ -11,7 +11,7 @@ namespace Exercice_06
         public double Temperature;
     }
     public struct Fahrenheit {
-        public double Temperature;
+        public int Temperature;
     }
     class Program
     {
@@ -78,7 +78,10 @@ namespace Exercice_06
          * de type double appelée « Temperature ».
          * */
         public static void temperatureCelsiusFahrenheit() {
-
+            Celsius tempCelsius;
+            tempCelsius.Temperature = 10.2d;
+            Fahrenheit tempFahrenheit;
+            tempFahrenheit.Temperature = 10;
             return;
         }
 
